@@ -1,0 +1,248 @@
+/* Colores principales */
+:root {
+    --color-bg: #000000;
+    --color-text: #ffffff;
+    --color-accent: #ffcc00;
+    --color-card-bg: #1c1c1c;
+    --color-card-hover: #333333;
+}
+
+
+/* titulo */
+body {
+    font-size: 10px;
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+
+
+/* encabezado */
+header {
+    background: var(--color-bg);
+    padding: 5px 0;
+    text-align: center;
+    border-bottom: 2px solid var(--color-accent);
+    position: sticky;  /* Hace que el header se quede pegado */
+    top: 0; /* Lo fija en la parte superior */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    width: 100%;
+}
+
+
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+/* navegadores */
+header nav ul li a {
+    font-size: 15px;
+    text-decoration: none;
+    color: var(--color-accent);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: var(--color-text);
+}
+
+/* separacion de navegadores */
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* color navegadores */
+header nav ul li a {
+    text-decoration: none;
+    color: var(--color-accent);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+
+header nav ul li a:hover {
+    color: var(--color-text);
+}
+
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(45deg, #000000, var(--color-card-bg));
+    color: var(--color-text);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#hero .cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 200px;
+    color: var(--color-bg);
+    background: var(--color-accent);
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#hero .cta-button:hover {
+    background: var(--color-text);
+    color: var(--color-accent);
+    transform: scale(1.1);
+}
+
+/* Dashboard Section */
+#dashboard iframe {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(63, 107, 135, 0.2);
+}
+
+/* espacio antes de servicios */
+#services {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* botones */
+.service-card {
+    background: var(--color-card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    background: var(--color-card-hover);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--color-card-bg);
+    color: var(--color-accent);
+}
+
+
+/* separacion entre cada tarjetas de proyectos */
+.dashboard-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+/* tarjetas de proyectos */
+.dashboard-card {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+/* tarjetas de proyectos2 */
+.dashboard-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+
+.dashboard-card h3 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.dashboard-card p {
+    font-size: 1em;
+    color: #555;
+    margin: 20px;
+}
+
+
+
+
+
+
+#video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-text);
+    background: rgba(0, 0, 0, 0.5); /* Opcional, para mayor contraste */
+    z-index: 1;
+}
+
+.video-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.video-overlay p {
+    font-size: 1.5rem;
+}
+
+
