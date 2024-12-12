@@ -1,26 +1,44 @@
 /* Colores principales */
 :root {
-    --color-bg: #000000;
+    --color-bg: linear-gradient(135deg, rgba(0, 0, 0, 0.9), #000000, rgb(0, 0, 0));
     --color-text: #ffffff;
     --color-accent: #ffcc00;
     --color-card-bg: #1c1c1c;
     --color-card-hover: #333333;
 }
 
-
-/* titulo */
+/* Titulo */
 body {
     font-size: 10px;
     font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
-    background: var(--color-bg);
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), #000000, rgb(0, 0, 0)); /* fondo de la pagina */
     color: var(--color-text);
 }
 
 
+/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
 
-/* encabezado */
+
+
+/* al dar click sobre los botones de menu ajusta a que parte de la pagina te manda */
+html {
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 130px; /* Ajusta el valor según la altura de tu encabezado */
+}
+h1 a {
+    color: white;
+    text-decoration: none; /* Elimina el subrayado */
+    font-size: 35px; /* Ajusta el tamaño de la fuente */
+}
+
+
+
+
+
+/* Encabezado */
 header {
     background: var(--color-bg);
     padding: 5px 0;
@@ -33,19 +51,17 @@ header {
 }
 
 
-
 header nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 50px;
 }
 
-
-/* navegadores */
+/* Navegadores */
 header nav ul li a {
-    font-size: 15px;
+    font-size: 25px;
     text-decoration: none;
     color: var(--color-accent);
     font-weight: bold;
@@ -56,76 +72,9 @@ header nav ul li a:hover {
     color: var(--color-text);
 }
 
-/* separacion de navegadores */
-header nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-}
-
-/* color navegadores */
-header nav ul li a {
-    text-decoration: none;
-    color: var(--color-accent);
-    font-weight: bold;
-    transition: color 0.3s;
-}
 
 
-header nav ul li a:hover {
-    color: var(--color-text);
-}
-
-
-/* Hero Section */
-#hero {
-    background: linear-gradient(45deg, #000000, var(--color-card-bg));
-    color: var(--color-text);
-    text-align: center;
-    padding: 60px 20px;
-}
-
-#hero .cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 200px;
-    color: var(--color-bg);
-    background: var(--color-accent);
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: transform 0.3s, background-color 0.3s;
-}
-
-#hero .cta-button:hover {
-    background: var(--color-text);
-    color: var(--color-accent);
-    transform: scale(1.1);
-}
-
-/* Dashboard Section */
-#dashboard iframe {
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(63, 107, 135, 0.2);
-}
-
-/* espacio antes de servicios */
-#services {
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-/* botones */
+/* Botones */
 .service-card {
     background: var(--color-card-bg);
     padding: 20px;
@@ -136,10 +85,66 @@ header nav ul li a:hover {
 
 .service-card:hover {
     transform: translateY(-10px);
-    background: var(--color-card-hover);
+    background: var(--color-card-hover); /* en que color aparecen al pasar el mouse por encima */
 }
 
-/* Footer */
+
+
+
+/* Estilo inicial para las palabras */
+.animated-section {
+    background-color: --color-bg; /* Asegura que el fondo sea blanco */
+    padding: 20px; /* Espaciado interno opcional */
+    width: 100%; /* Asegura que la sección ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */   
+}
+.animated-word {
+    opacity: 0;
+    transform: translateY(180px); /* Desplazamiento inicial hacia abajo */
+    transition: opacity 0.6s ease-out, transform 0.9s ease-out; /* Animación suave */
+    text-align: center;
+    margin: 20px 0;
+    color: rgb(255, 255, 255); /* Texto en color blanco */
+}
+
+/* Tamaños individuales */
+.word-large {
+    font-size: 4rem;
+}
+.word-small {
+    font-size: 1rem;
+}
+
+/* Clase para animar las palabras al entrar en pantalla */
+.animated-word.visible {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a la posición original */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*tarjetas de proyectos */
 footer {
     text-align: center;
     padding: 20px;
@@ -147,8 +152,7 @@ footer {
     color: var(--color-accent);
 }
 
-
-/* separacion entre cada tarjetas de proyectos */
+/* Separación entre cada tarjetas de proyectos */
 .dashboard-grid {
     display: flex;
     justify-content: space-between;
@@ -156,8 +160,7 @@ footer {
     margin-top: 20px;
 }
 
-
-/* tarjetas de proyectos */
+/* Tarjetas de proyectos */
 .dashboard-card {
     flex: 1;
     border: 1px solid #ccc;
@@ -168,15 +171,12 @@ footer {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-
-
 .dashboard-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-
-/* tarjetas de proyectos2 */
+/* Tarjetas de proyectos2 */
 .dashboard-card img {
     width: 100%;
     height: auto;
@@ -184,7 +184,7 @@ footer {
     border-bottom: 1px solid #ddd;
 }
 
-
+/* Tarjetas de proyectos recuadro de abajo */
 .dashboard-card h3 {
     font-size: 1.5em;
     margin: 10px 0;
@@ -196,15 +196,33 @@ footer {
     margin: 20px;
 }
 
+/* Espacio antes de tarjetas de servicios */
+#services {
+    padding: 80px 20px;
+    text-align: center;
+}
 
+/* Tarjetas de servicios */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
+/* Tarjetas de servicios 2 */
+.service-card {
+    background: var(--color-card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
 
-
-
+/* Video */
 #video-background {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height:80vh;
     overflow: hidden;
 }
 
@@ -244,5 +262,50 @@ footer {
 .video-overlay p {
     font-size: 1.5rem;
 }
+
+/* Botones de whatsapp */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+footer {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.social-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.social-button img {
+    width: 35px;
+    height: 35px;
+    border-radius: 20%;
+    transition: transform 0.3s;
+}
+
+.social-button img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
 
 
