@@ -1,267 +1,400 @@
-/* Colores principales */
+/* Definición de los colores principales usando variables CSS */
 :root {
-    --color-bg: linear-gradient(135deg, rgba(0, 0, 0, 0.9), #000000, rgb(0, 0, 0));
-    --color-text: #ffffff;
-    --color-accent: #ffcc00;
-    --color-card-bg: #1c1c1c;
-    --color-card-hover: #333333;
+    --color-bg: linear-gradient(135deg, #103765, #00CFFD); /* Fondo en degradado con tonos oscuros */
+    --color-text: #ffffff; /* Color de texto blanco */
+    --color-accent: #ffffff; /* Color de acento amarillo */
+    --color-card-bg: #3e0d0d; /* Fondo oscuro para las tarjetas */
+    --color-card-hover: linear-gradient(135deg, #06E9BC, #e94df7); /* Color para el fondo de las tarjetas cuando el cursor está sobre ellas */
 }
 
-/* Titulo */
+/* Estilo para el cuerpo de la página */
 body {
-    font-size: 10px;
-    font-family: 'Georgia', serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), #000000, rgb(0, 0, 0)); /* fondo de la pagina */
-    color: var(--color-text);
+    font-size: 10px; /* Tamaño de fuente base pequeño */
+    font-family: 'Georgia', serif; /* Fuente serif 'Georgia' para el texto */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina el padding predeterminado */
+    background: linear-gradient(135deg, #F5F5F5, #F5F5F5); /* Fondo en degradado negro */
+    color: var(--color-text); /* Asigna el color de texto blanco desde la variable */
 }
 
-
-/*  *//*  *//*  *//*  *//*  *//*  *//*  *//*  */
-
-
-
-/* al dar click sobre los botones de menu ajusta a que parte de la pagina te manda */
+/* Habilita el desplazamiento suave al hacer clic en los enlaces del menú */
 html {
-    scroll-behavior: smooth;
-
-    scroll-padding-top: 130px; /* Ajusta el valor según la altura de tu encabezado */
+    scroll-behavior: smooth; /* Habilita desplazamiento suave */
+    scroll-padding-top: 30px; /* Ajusta el espacio superior al hacer scroll (tamaño del encabezado) */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para el enlace en el título (h1) */
 h1 a {
-    color: white;
-    text-decoration: none; /* Elimina el subrayado */
-    font-size: 35px; /* Ajusta el tamaño de la fuente */
+    color: white; /* Color blanco para el enlace (data bixpy) */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-size: 35px; /* Tamaño de la fuente para el enlace */
+}
+
+/* Estilo para el encabezado de la página */
+* {
+    box-sizing: border-box; /* Asegura que el padding y el borde no afecten el tamaño total de los elementos */
 }
 
 
 
-
-
-/* Encabezado */
 header {
-    background: var(--color-bg);
-    padding: 5px 0;
-    text-align: center;
-    border-bottom: 2px solid var(--color-accent);
-    position: sticky;  /* Hace que el header se quede pegado */
-    top: 0; /* Lo fija en la parte superior */
-    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
-    width: 100%;
+    background: var(--color-bg); /* Fondo con el color de acento */
+    padding: 0 20px; /* Añadir un poco de espacio a los lados */
+    display: flex;
+    align-items: center; /* Centra los elementos verticalmente */
+    position: fixed; /* Hace que el encabezado esté fijo */
+    top: 0; /* Lo coloca en la parte superior de la página */
+    left: 0; /* Asegura que esté alineado con el borde izquierdo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    width: 100%; /* Ocupa el 100% del ancho de la página */
+    box-shadow: 0 4px 2px -2px gray; /* Opcional: agrega una sombra para mejorar la visibilidad */
+    overflow: hidden; /* Evita que el contenido se desborde del contenedor */
+    border-bottom: 3px solid rgb(255, 255, 255); /* Línea azul al final del encabezado */
+}
+
+
+/* Contenedor del logo */
+.logo-container {
+    margin-right: auto; /* Empuja el logo hacia la izquierda */
+}
+
+/* Estilo para el logo */
+header .logo {
+    width: 180px; /* Ajusta el ancho del logo a 250px */
+    height: 110px; /* Ajusta la altura del logo a 100px */
+}
+
+/* Estilo para el menú de navegación */
+header nav {
+    display: flex;
+    justify-content: flex-start; /* Alinea los elementos del menú hacia la izquierda */
+    padding-left: 100px; /* Ajusta este valor para mover el menú según lo necesites */
+    flex-grow: 1; /* Asegura que el menú ocupe el espacio disponible */
 }
 
 
 header nav ul {
     list-style: none;
-    padding: 0;
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    align-items: center;
+    gap: 40px; /* Ajusta el espacio entre los elementos del menú */
 }
 
-/* Navegadores */
+header nav ul li {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos de la lista */
+}
+
 header nav ul li a {
-    font-size: 25px;
+    font-size: 28px; /* Ajusta el tamaño del texto del menú para que se ajuste mejor */
     text-decoration: none;
-    color: var(--color-accent);
+    color: white; /* Color blanco para los enlaces */
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.3s ease; /* Transición suave para el color */
 }
 
 header nav ul li a:hover {
-    color: var(--color-text);
+    color: #f39c12; /* Color de acento cuando pasas el mouse */
 }
 
 
 
-/* Botones */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ############################################################ tarjetas de servicios ################################################################## */
+
+/* Estilo para las tarjetas de servicios */
 .service-card {
-    background: var(--color-card-bg);
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s, background 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background: #ffffff; /* Fondo semitransparente negro */
+    padding: 6px; /* Espaciado interno de 20px en todos los lados */
+    border-radius: 8px; /* Esquinas redondeadas con un radio de 8px */
+    transition: transform 0.3s, background 0.3s; /* Efecto de transición suave para transformaciones y cambios de fondo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra debajo de la tarjeta para darle profundidad */
 }
 
+/* Estilo cuando el usuario coloca el cursor sobre la tarjeta */
 .service-card:hover {
-    transform: translateY(-10px);
-    background: var(--color-card-hover); /* en que color aparecen al pasar el mouse por encima */
+    transform: translateY(-10px); /* Eleva la tarjeta 10px hacia arriba */
+    background: var(--color-card-hover); /* Cambia el fondo al valor definido en la variable CSS */
 }
 
-
-
-
-/* Estilo inicial para las palabras */
-.animated-section {
-    background-color: --color-bg; /* Asegura que el fondo sea blanco */
-    padding: 20px; /* Espaciado interno opcional */
-    width: 100%; /* Asegura que la sección ocupe todo el ancho disponible */
-    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho */   
-}
-.animated-word {
-    opacity: 0;
-    transform: translateY(180px); /* Desplazamiento inicial hacia abajo */
-    transition: opacity 0.6s ease-out, transform 0.9s ease-out; /* Animación suave */
-    text-align: center;
-    margin: 20px 0;
-    color: rgb(255, 255, 255); /* Texto en color blanco */
-}
-
-/* Tamaños individuales */
-.word-large {
-    font-size: 4rem;
-}
-.word-small {
-    font-size: 1rem;
-}
-
-/* Clase para animar las palabras al entrar en pantalla */
-.animated-word.visible {
-    opacity: 1;
-    transform: translateY(0); /* Vuelve a la posición original */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*tarjetas de proyectos */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: var(--color-card-bg);
-    color: var(--color-accent);
-}
-
-/* Separación entre cada tarjetas de proyectos */
-.dashboard-grid {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-/* Tarjetas de proyectos */
-.dashboard-card {
-    flex: 1;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.dashboard-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Tarjetas de proyectos2 */
-.dashboard-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 1px solid #ddd;
-}
-
-/* Tarjetas de proyectos recuadro de abajo */
-.dashboard-card h3 {
-    font-size: 1.5em;
-    margin: 10px 0;
-}
-
-.dashboard-card p {
-    font-size: 1em;
-    color: #555;
-    margin: 20px;
-}
-
-/* Espacio antes de tarjetas de servicios */
+/* Sección de servicios */
 #services {
-    padding: 80px 20px;
-    text-align: center;
+    padding: 120px 20px; /* Espaciado interno de 120px arriba y abajo, 20px a los lados */
+    text-align: center; /* Centra horizontalmente el contenido */
 }
 
-/* Tarjetas de servicios */
+/* Grid (rejilla) para organizar las tarjetas de servicio */
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    display: grid; /* Configura un contenedor de tipo grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas flexibles, mínimo de 250px y máximo distribuidas uniformemente */
+    gap: 20px; /* Espaciado de 20px entre las tarjetas */
+}  
+
+/* estilo para palabras "nuestros servicios" */
+#services h2 {
+    font-size: 2.5rem; /* Ajusta el tamaño del texto aquí */
+    font-weight: bold; /* Opcional: Negrita para resaltar */
+    text-align: center; /* Centrado */
+    color: #0A2342; /* Cambia el color si es necesario */
+    margin-bottom: 20px; /* Espaciado inferior */
 }
 
-/* Tarjetas de servicios 2 */
-.service-card {
-    background: var(--color-card-bg);
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s, background 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+/* titulo de tarjetas de servicio */
+#services h3 {
+    font-size: 1.2rem; /* Tamaño del título del servicio */
+    font-weight: bold; /* Negrita para resaltar el título */
+    color: #0A2342; /* Color del texto del título */
+    margin-bottom: 10px; /* Espaciado inferior del título */
+    text-align: center; /* Alineación del texto */
 }
 
-/* Video */
+/* texto de tarjetas de servicio */
+#services p {
+    font-size: 1.1rem; /* Tamaño del texto descriptivo */
+    /* font-weight: bold; Negrita para resaltar el título */
+    line-height: 1.6; /* Altura de línea para mejor legibilidad */
+    color: #0A2342; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado inferior del párrafo */
+    text-align: center; /* Alineación justificada */
+    font-family: Arial;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ################################################ PALABRAS ANIMADAS ######################################################## */
+
+
+
+/* Estilo inicial para las secciones animadas */
+.animated-section {
+    background-color: var(--color-bg); /* Define un fondo para la sección (esto es un error, debería ser 'var(--color-bg)') */
+    padding: 20px; /* Espaciado interno */
+    width: 100%; /* Hace que la sección ocupe todo el ancho disponible */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+}
+
+/* Estilo para las palabras animadas */
+.animated-word {
+    opacity: 0; /* Hace que las palabras estén invisibles inicialmente */
+    transform: translateY(160px); /* Desplaza las palabras hacia abajo */
+    transition: opacity 1.5s ease-out, transform 0.9s ease-out; /* Animación suave de opacidad y movimiento */
+    text-align: center; /* Centra el texto */
+    margin: 20px 0; /* Espaciado arriba y abajo */
+    
+    /* Degradado */
+    background: linear-gradient(45deg, #0A2342, #0A2342); /* Degradado de color */
+    -webkit-background-clip: text; /* Aplica el degradado solo al texto (para Chrome/Safari) */
+    background-clip: text; /* Asegura compatibilidad con otros navegadores */
+    color: transparent; /* El color de la fuente se vuelve transparente para mostrar el degradado */
+    
+    /* Estilo de letra */
+    font-family: 'Arial', sans-serif; /* Cambia a la fuente que prefieras */
+    font-weight: bold; /* Pone la fuente en negrita */
+    font-size: 2em; /* Tamaño de la fuente */
+}
+
+
+/* Tamaño de las palabras grandes */
+.word-large {
+    font-size: 4rem; /* Tamaño de fuente grande */
+}
+
+/* Tamaño de las palabras pequeñas */
+.word-small {
+    font-size: 1rem; /* Tamaño de fuente pequeño */
+}
+
+/* Estilo para las palabras animadas cuando son visibles */
+.animated-word.visible {
+    opacity: 1; /* Hace las palabras visibles */
+    transform: translateY(0); /* Devuelve las palabras a su posición original */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ######################################################## TARJETAS DE PROYECTOS ######################################################## */
+
+/* Estilo para el contenedor de las tarjetas de proyectos */
+.dashboard-grid {
+    display: flex; /* Disposición de las tarjetas en fila */
+    justify-content: space-between; /* Distribuye las tarjetas con espacio entre ellas */
+    gap: 10px; /* Espacio de 10px entre las tarjetas */
+    margin-top: 20px; /* Espacio superior */
+}
+
+/* Estilo para las tarjetas de proyectos */
+.dashboard-card {
+    flex: 1; /* Las tarjetas se expanden para llenar el espacio disponible */
+    border: 1px solid #000000; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que el contenido se desborde */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para el hover */
+    margin: 3px;
+    background: linear-gradient(to bottom, #103765, #059bbd9d);
+}
+
+/* Efecto hover en las tarjetas de proyectos */
+.dashboard-card:hover {
+    transform: translateY(-10px); /* Mueve las tarjetas hacia arriba */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra en el hover */
+}
+
+/* Estilo para las imágenes dentro de las tarjetas de proyectos */
+.dashboard-card img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Ajusta la altura automáticamente */
+    display: block; /* Hace que la imagen sea un bloque de nivel de bloque */
+    border-bottom: 1px solid #ddd; /* Añade una línea debajo de la imagen */
+}
+
+/* Estilo para los títulos dentro de las tarjetas de proyectos */
+.dashboard-card h3 {
+    font-size: 1.9em; /* Tamaño de fuente grande para el título */
+    margin: 10px 0; /* Espaciado arriba y abajo */
+    font-weight: bold; /* Texto en negritas */
+}
+
+/* Estilo para los párrafos dentro de las tarjetas de proyectos */
+.dashboard-card p {
+    font-size: 1.3em; /* Tamaño de fuente normal */
+    color: #ffffff; /* Color gris oscuro */
+    margin: 20px; /* Espaciado interno */
+    font-weight: bold; /* Texto en negritas */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ################################################################ FONDO DEL VIDEO ######################################################## */
+
+
+/* Estilo para el fondo del video */
 #video-background {
-    position: relative;
-    width: 100%;
-    height:80vh;
-    overflow: hidden;
+    position: relative; /* Posiciona el video relativo al contenedor */
+    width: 100%; /* Hace que el video ocupe todo el ancho */
+    height: 110vh; /* Establece la altura del video al 110% de la ventana */
+    overflow: hidden; /* Oculta cualquier parte que sobresalga del contenedor */
 }
 
+/* Estilo para el video de fondo */
 #video-background video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
+    position: absolute; /* Posiciona el video absolutamente dentro del contenedor */
+    top: 50%; /* Lo centra verticalmente */
+    left: 50%; /* Lo centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para centrar el video */
+    min-width: 100%; /* Hace que el video ocupe el ancho total */
+    min-height: 100%; /* Hace que el video ocupe la altura total */
+    width: auto; /* Ajusta la anchura del video */
+    height: auto; /* Ajusta la altura del video */
+    z-index: -1; /* Coloca el video detrás de otros elementos */
 }
 
+/* Estilo para la superposición sobre el video */
 .video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--color-text);
-    background: rgba(0, 0, 0, 0.5); /* Opcional, para mayor contraste */
-    z-index: 1;
+    position: absolute; /* Posiciona la superposición absolutamente */
+    top: 0; /* Coloca en la parte superior */
+    left: 0; /* Coloca en la parte izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    flex-direction: column; /* Organiza el contenido en una columna */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto */
+    color: var(--color-text); /* Color de texto blanco */
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    z-index: 1; /* Coloca el overlay sobre el video */
 }
 
+/* Estilo para el encabezado dentro de la superposición */
 .video-overlay h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: 3rem; /* Tamaño de fuente grande */
+    margin-bottom: 10px; /* Espaciado inferior */
 }
 
+/* Estilo para el párrafo dentro de la superposición */
 .video-overlay p {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Tamaño de fuente para el párrafo */
 }
+
+/* Estilo para el pie de página */
+footer {
+    position: relative; /* Posición relativa */
+    background-color: #000000; /* Fondo de color gris claro */
+    padding: 10px 0; /* Espaciado superior e inferior */
+    text-align: center; /* Centra el texto */
+}
+
+
+
+footer a:hover {
+    text-decoration: underline; /* Subraya el enlace cuando se pasa el cursor sobre él */
+}
+
 
 /* Botones de whatsapp */
 body {
@@ -303,9 +436,22 @@ footer {
     transform: scale(1.1);
 }
 
+.bold-text {
+    font-weight: bold;
+    color:#0A2342;
+    font-size: 40px; /* Ajusta el tamaño según lo necesites */
+    text-align: center; /* Centrar el texto */
+    margin-top: 20px; /* Ajusta la separación superior */
+    
+}
 
 
 
 
-
-
+/* Estilo para el pie de página */
+footer {
+    text-align: center; /* Centra el texto en el pie de página */
+    padding: 9px; /* Espaciado interno */
+    background: #0A2342; /* Fondo oscuro para el pie de página */
+    color: #ffffff; /* Color de texto con el color de acento */
+}

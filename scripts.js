@@ -31,3 +31,5 @@ document.addEventListener("DOMContentLoaded", () => {
     
     words.forEach(word => observer.observe(word));
 });
+
+
