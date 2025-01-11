@@ -2,19 +2,19 @@
 :root {
     --color-bg: linear-gradient(135deg, #103765, #00CFFD); /* Fondo en degradado con tonos oscuros */
     --color-text: #ffffff; /* Color de texto blanco */
-    --color-accent: #ffffff; /* Color de acento amarillo */
+    --color-accent: #ffffff; /* Color de acento blanco */
     --color-card-bg: #3e0d0d; /* Fondo oscuro para las tarjetas */
     --color-card-hover: linear-gradient(135deg, #06E9BC, #e94df7); /* Color para el fondo de las tarjetas cuando el cursor está sobre ellas */
 }
 
 /* Estilo para el cuerpo de la página */
 body {
-    font-size: 10px; /* Tamaño de fuente base pequeño */
+    font-size: 16px; /* Tamaño de fuente base */
     font-family: 'Georgia', serif; /* Fuente serif 'Georgia' para el texto */
-    margin: 0; /* Elimina los márgenes predeterminados */
-    padding: 0; /* Elimina el padding predeterminado */
-    background: linear-gradient(135deg, #F5F5F5, #F5F5F5); /* Fondo en degradado negro */
-    color: var(--color-text); /* Asigna el color de texto blanco desde la variable */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #F5F5F5, #F5F5F5); /* Fondo en degradado */
+    color: var(--color-text); /* Asigna el color de texto blanco */
 }
 
 /* Habilita el desplazamiento suave al hacer clic en los enlaces del menú */
@@ -23,397 +23,268 @@ html {
     scroll-padding-top: 30px; /* Ajusta el espacio superior al hacer scroll (tamaño del encabezado) */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Estilo para el enlace en el título (h1) */
 h1 a {
-    color: white; /* Color blanco para el enlace (data bixpy) */
-    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: white; /* Color blanco para el enlace */
+    text-decoration: none;
     font-size: 35px; /* Tamaño de la fuente para el enlace */
 }
 
-/* Estilo para el encabezado de la página */
+/* Estilo para el encabezado */
 * {
     box-sizing: border-box; /* Asegura que el padding y el borde no afecten el tamaño total de los elementos */
 }
 
-
-
 header {
     background: var(--color-bg); /* Fondo con el color de acento */
-    padding: 0 20px; /* Añadir un poco de espacio a los lados */
+    padding: 0 20px;
     display: flex;
     align-items: center; /* Centra los elementos verticalmente */
     position: fixed; /* Hace que el encabezado esté fijo */
-    top: 0; /* Lo coloca en la parte superior de la página */
-    left: 0; /* Asegura que esté alineado con el borde izquierdo */
-    z-index: 1000; /* Asegura que esté por encima de otros elementos */
-    width: 100%; /* Ocupa el 100% del ancho de la página */
-    box-shadow: 0 4px 2px -2px gray; /* Opcional: agrega una sombra para mejorar la visibilidad */
-    overflow: hidden; /* Evita que el contenido se desborde del contenedor */
-    border-bottom: 3px solid rgb(255, 255, 255); /* Línea azul al final del encabezado */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 4px 2px -2px gray; /* Opcional: agrega una sombra */
+    border-bottom: 3px solid rgb(255, 255, 255); /* Línea al final del encabezado */
 }
-
 
 /* Contenedor del logo */
 .logo-container {
-    margin-right: auto; /* Empuja el logo hacia la izquierda */
+    margin-right: auto;
 }
 
 /* Estilo para el logo */
 header .logo {
-    width: 180px; /* Ajusta el ancho del logo a 250px */
-    height: 110px; /* Ajusta la altura del logo a 100px */
+    width: 180px;
+    height: 110px;
 }
 
 /* Estilo para el menú de navegación */
 header nav {
     display: flex;
-    justify-content: flex-start; /* Alinea los elementos del menú hacia la izquierda */
-    padding-left: 100px; /* Ajusta este valor para mover el menú según lo necesites */
-    flex-grow: 1; /* Asegura que el menú ocupe el espacio disponible */
+    justify-content: flex-start;
+    padding-left: 100px;
+    flex-grow: 1;
 }
-
 
 header nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 40px; /* Ajusta el espacio entre los elementos del menú */
+    gap: 40px;
 }
 
 header nav ul li {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos de la lista */
+    align-items: center;
 }
 
 header nav ul li a {
-    font-size: 28px; /* Ajusta el tamaño del texto del menú para que se ajuste mejor */
+    font-size: 28px;
     text-decoration: none;
-    color: white; /* Color blanco para los enlaces */
+    color: white;
     font-weight: bold;
-    transition: color 0.3s ease; /* Transición suave para el color */
+    transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
     color: #f39c12; /* Color de acento cuando pasas el mouse */
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ############################################################ tarjetas de servicios ################################################################## */
-
 /* Estilo para las tarjetas de servicios */
 .service-card {
-    background: #ffffff; /* Fondo semitransparente negro */
-    padding: 6px; /* Espaciado interno de 20px en todos los lados */
-    border-radius: 8px; /* Esquinas redondeadas con un radio de 8px */
-    transition: transform 0.3s, background 0.3s; /* Efecto de transición suave para transformaciones y cambios de fondo */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra debajo de la tarjeta para darle profundidad */
+    background: #ffffff; /* Fondo blanco */
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo cuando el usuario coloca el cursor sobre la tarjeta */
 .service-card:hover {
-    transform: translateY(-10px); /* Eleva la tarjeta 10px hacia arriba */
-    background: var(--color-card-hover); /* Cambia el fondo al valor definido en la variable CSS */
+    transform: translateY(-10px);
+    background: var(--color-card-hover);
 }
 
 /* Sección de servicios */
 #services {
-    padding: 120px 20px; /* Espaciado interno de 120px arriba y abajo, 20px a los lados */
-    text-align: center; /* Centra horizontalmente el contenido */
+    padding: 120px 20px;
+    text-align: center;
 }
 
-/* Grid (rejilla) para organizar las tarjetas de servicio */
+/* Grid para las tarjetas de servicio */
 .services-grid {
-    display: grid; /* Configura un contenedor de tipo grid */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crea columnas flexibles, mínimo de 250px y máximo distribuidas uniformemente */
-    gap: 20px; /* Espaciado de 20px entre las tarjetas */
-}  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
 
-/* estilo para palabras "nuestros servicios" */
+/* Estilo para el título de servicios */
 #services h2 {
-    font-size: 2.5rem; /* Ajusta el tamaño del texto aquí */
-    font-weight: bold; /* Opcional: Negrita para resaltar */
-    text-align: center; /* Centrado */
-    color: #0A2342; /* Cambia el color si es necesario */
-    margin-bottom: 20px; /* Espaciado inferior */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #0A2342;
+    margin-bottom: 20px;
 }
 
-/* titulo de tarjetas de servicio */
+/* Títulos de las tarjetas de servicio */
 #services h3 {
-    font-size: 1.2rem; /* Tamaño del título del servicio */
-    font-weight: bold; /* Negrita para resaltar el título */
-    color: #0A2342; /* Color del texto del título */
-    margin-bottom: 10px; /* Espaciado inferior del título */
-    text-align: center; /* Alineación del texto */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0A2342;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-/* texto de tarjetas de servicio */
+/* Texto de las tarjetas de servicio */
 #services p {
-    font-size: 1.1rem; /* Tamaño del texto descriptivo */
-    /* font-weight: bold; Negrita para resaltar el título */
-    line-height: 1.6; /* Altura de línea para mejor legibilidad */
-    color: #0A2342; /* Color del texto */
-    margin-bottom: 20px; /* Espaciado inferior del párrafo */
-    text-align: center; /* Alineación justificada */
-    font-family: Arial;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-/* ################################################ PALABRAS ANIMADAS ######################################################## */
-
-
-
-/* Estilo inicial para las secciones animadas */
-.animated-section {
-    background-color: var(--color-bg); /* Define un fondo para la sección (esto es un error, debería ser 'var(--color-bg)') */
-    padding: 20px; /* Espaciado interno */
-    width: 100%; /* Hace que la sección ocupe todo el ancho disponible */
-    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #0A2342;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
 /* Estilo para las palabras animadas */
+.animated-section {
+    background-color: var(--color-bg);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .animated-word {
-    opacity: 0; /* Hace que las palabras estén invisibles inicialmente */
-    transform: translateY(160px); /* Desplaza las palabras hacia abajo */
-    transition: opacity 1.5s ease-out, transform 0.9s ease-out; /* Animación suave de opacidad y movimiento */
-    text-align: center; /* Centra el texto */
-    margin: 20px 0; /* Espaciado arriba y abajo */
-    
-    /* Degradado */
-    background: linear-gradient(45deg, #0A2342, #0A2342); /* Degradado de color */
-    -webkit-background-clip: text; /* Aplica el degradado solo al texto (para Chrome/Safari) */
-    background-clip: text; /* Asegura compatibilidad con otros navegadores */
-    color: transparent; /* El color de la fuente se vuelve transparente para mostrar el degradado */
-    
-    /* Estilo de letra */
-    font-family: 'Arial', sans-serif; /* Cambia a la fuente que prefieras */
-    font-weight: bold; /* Pone la fuente en negrita */
-    font-size: 2em; /* Tamaño de la fuente */
+    opacity: 0;
+    transform: translateY(160px);
+    transition: opacity 1.5s ease-out, transform 0.9s ease-out;
+    text-align: center;
+    margin: 20px 0;
+    background: linear-gradient(45deg, #0A2342, #0A2342);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
 }
 
-
-/* Tamaño de las palabras grandes */
 .word-large {
-    font-size: 4rem; /* Tamaño de fuente grande */
+    font-size: 4rem;
 }
 
-/* Tamaño de las palabras pequeñas */
 .word-small {
-    font-size: 1rem; /* Tamaño de fuente pequeño */
+    font-size: 1rem;
 }
 
-/* Estilo para las palabras animadas cuando son visibles */
 .animated-word.visible {
-    opacity: 1; /* Hace las palabras visibles */
-    transform: translateY(0); /* Devuelve las palabras a su posición original */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ######################################################## TARJETAS DE PROYECTOS ######################################################## */
-
-/* Estilo para el contenedor de las tarjetas de proyectos */
-.dashboard-grid {
-    display: flex; /* Disposición de las tarjetas en fila */
-    justify-content: space-between; /* Distribuye las tarjetas con espacio entre ellas */
-    gap: 10px; /* Espacio de 10px entre las tarjetas */
-    margin-top: 20px; /* Espacio superior */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Estilo para las tarjetas de proyectos */
+.dashboard-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
 .dashboard-card {
-    flex: 1; /* Las tarjetas se expanden para llenar el espacio disponible */
-    border: 1px solid #000000; /* Borde gris claro */
-    border-radius: 10px; /* Bordes redondeados */
-    overflow: hidden; /* Evita que el contenido se desborde */
-    text-align: center; /* Centra el texto dentro de la tarjeta */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para el hover */
+    flex: 1;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
     margin: 3px;
     background: linear-gradient(to bottom, #103765, #059bbd9d);
 }
 
-/* Efecto hover en las tarjetas de proyectos */
 .dashboard-card:hover {
-    transform: translateY(-10px); /* Mueve las tarjetas hacia arriba */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra en el hover */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para las imágenes dentro de las tarjetas de proyectos */
 .dashboard-card img {
-    width: 100%; /* Hace que la imagen ocupe todo el ancho de la tarjeta */
-    height: auto; /* Ajusta la altura automáticamente */
-    display: block; /* Hace que la imagen sea un bloque de nivel de bloque */
-    border-bottom: 1px solid #ddd; /* Añade una línea debajo de la imagen */
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Estilo para los títulos dentro de las tarjetas de proyectos */
 .dashboard-card h3 {
-    font-size: 1.9em; /* Tamaño de fuente grande para el título */
-    margin: 10px 0; /* Espaciado arriba y abajo */
-    font-weight: bold; /* Texto en negritas */
+    font-size: 1.9em;
+    margin: 10px 0;
+    font-weight: bold;
 }
 
-/* Estilo para los párrafos dentro de las tarjetas de proyectos */
 .dashboard-card p {
-    font-size: 1.3em; /* Tamaño de fuente normal */
-    color: #ffffff; /* Color gris oscuro */
-    margin: 20px; /* Espaciado interno */
-    font-weight: bold; /* Texto en negritas */
+    font-size: 1.3em;
+    color: #ffffff;
+    margin: 20px;
+    font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-/* ################################################################ FONDO DEL VIDEO ######################################################## */
-
 
 /* Estilo para el fondo del video */
 #video-background {
-    position: relative; /* Posiciona el video relativo al contenedor */
-    width: 100%; /* Hace que el video ocupe todo el ancho */
-    height: 110vh; /* Establece la altura del video al 110% de la ventana */
-    overflow: hidden; /* Oculta cualquier parte que sobresalga del contenedor */
+    position: relative;
+    width: 100%;
+    height: 110vh;
+    overflow: hidden;
 }
 
-/* Estilo para el video de fondo */
 #video-background video {
-    position: absolute; /* Posiciona el video absolutamente dentro del contenedor */
-    top: 50%; /* Lo centra verticalmente */
-    left: 50%; /* Lo centra horizontalmente */
-    transform: translate(-50%, -50%); /* Ajuste para centrar el video */
-    min-width: 100%; /* Hace que el video ocupe el ancho total */
-    min-height: 100%; /* Hace que el video ocupe la altura total */
-    width: auto; /* Ajusta la anchura del video */
-    height: auto; /* Ajusta la altura del video */
-    z-index: -1; /* Coloca el video detrás de otros elementos */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
 }
 
-/* Estilo para la superposición sobre el video */
 .video-overlay {
-    position: absolute; /* Posiciona la superposición absolutamente */
-    top: 0; /* Coloca en la parte superior */
-    left: 0; /* Coloca en la parte izquierda */
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Altura completa */
-    display: flex; /* Usa flexbox para centrar el contenido */
-    flex-direction: column; /* Organiza el contenido en una columna */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    text-align: center; /* Centra el texto */
-    color: var(--color-text); /* Color de texto blanco */
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
-    z-index: 1; /* Coloca el overlay sobre el video */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-text);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
-/* Estilo para el encabezado dentro de la superposición */
 .video-overlay h1 {
-    font-size: 3rem; /* Tamaño de fuente grande */
-    margin-bottom: 10px; /* Espaciado inferior */
+    font-size: 3rem;
+    margin-bottom: 10px;
 }
 
-/* Estilo para el párrafo dentro de la superposición */
 .video-overlay p {
-    font-size: 1.5rem; /* Tamaño de fuente para el párrafo */
+    font-size: 1.5rem;
 }
 
 /* Estilo para el pie de página */
 footer {
-    position: relative; /* Posición relativa */
-    background-color: #000000; /* Fondo de color gris claro */
-    padding: 10px 0; /* Espaciado superior e inferior */
-    text-align: center; /* Centra el texto */
-}
-
-
-
-footer a:hover {
-    text-decoration: underline; /* Subraya el enlace cuando se pasa el cursor sobre él */
-}
-
-
-/* Botones de whatsapp */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.content {
-    flex: 1;
-}
-
-footer {
     position: relative;
-    background-color: #f8f9fa;
-    padding: 20px 0;
+    background-color: #0A2342;
+    padding: 9px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Botones de WhatsApp */
+footer a:hover {
+    text-decoration: underline;
 }
 
 .social-buttons {
@@ -438,20 +309,66 @@ footer {
 
 .bold-text {
     font-weight: bold;
-    color:#0A2342;
-    font-size: 40px; /* Ajusta el tamaño según lo necesites */
-    text-align: center; /* Centrar el texto */
-    margin-top: 20px; /* Ajusta la separación superior */
-    
+    color: #0A2342;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
 }
 
+/* Media queries para vista móvil */
+@media (max-width: 768px) {
+    header nav {
+        padding-left: 50px;
+    }
 
+    header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
 
+    header nav ul li {
+        font-size: 20px;
+    }
 
-/* Estilo para el pie de página */
-footer {
-    text-align: center; /* Centra el texto en el pie de página */
-    padding: 9px; /* Espaciado interno */
-    background: #0A2342; /* Fondo oscuro para el pie de página */
-    color: #ffffff; /* Color de texto con el color de acento */
+    .service-card {
+        padding: 15px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .dashboard-grid {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dashboard-card {
+        width: 100%;
+    }
+
+    .social-buttons {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 a {
+        font-size: 28px;
+    }
+
+    header .logo {
+        width: 150px;
+        height: 90px;
+    }
+
+    .animated-word {
+        font-size: 1.5em;
+    }
+
+    .bold-text {
+        font-size: 30px;
+    }
 }
